@@ -163,28 +163,7 @@ pip install watchtower
 
 #### 2. Django `logging` settings
 
-```python
-import watchtower
-import logging
-
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "watchtower": {
-            "level": "INFO",
-            "class": "watchtower.CloudWatchLogHandler",
-            "log_group": "django-app-logs",
-            "stream_name": "eb-logs"
-        },
-    },
-    "root": {
-        "handlers": ["watchtower"],
-        "level": "INFO",
-    },
-}
-```
-
+see below
 #### 3. To debug errors:
 
 ```bash
@@ -242,7 +221,7 @@ Your Django app should now be:
 
 
 
-Great — based on the detailed IAM configuration, logging code (`views.py`), and logging setup (`settings.py`) you’ve provided, here is a **README** section you can use to document the **AWS CloudWatch logging integration** with your Django app deployed on **Elastic Beanstalk**.
+ **AWS CloudWatch logging integration** with your Django app deployed on **Elastic Beanstalk**.
 
 ---
 
@@ -411,5 +390,3 @@ def crash(request):
 * Visit `/crash` → Should log exception and error messages
 
 ---
-
-Let me know if you want to split this into smaller README sections or add environment variable details for AWS access credentials.
