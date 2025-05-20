@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logging Test</title>
+</head>
+<body>
+    <h1>Welcome to the Logging Test Page</h1>
+    <form action="/submit-form/" method="post">
+        {% csrf_token %}
+        <label>Name: <input type="text" name="name" /></label>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br><br>
+    <a href="/crash/">Trigger Crash</a>
+</body>
+</html> 
